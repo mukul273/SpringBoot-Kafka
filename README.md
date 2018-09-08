@@ -25,6 +25,10 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
 7. Remember to read about the group(s) in kafka, very useful information
 https://cwiki.apache.org/confluence/display/KAFKA/Consumer+Group+Example
 
+8. To delete the msgs from producer
+seq 0 | ./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic Kafka_Example_json
+replace the number after seq to delete those number of msgs. Msgs after that number will be retained. Before that number will be deleted from queue.
+
 My code uses lombok to avoid biler plate code.
 
 There is active information in the code for your information.
